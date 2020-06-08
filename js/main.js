@@ -28,7 +28,7 @@ function getRandomInteger(min, max) {
   return Math.floor(rand);
 }
 
-var getComments = function(numberComments) {
+var getComments = function (numberComments) {
   var comments = [];
 
   for (var i = 0; i < numberComments; i++) {
@@ -36,16 +36,16 @@ var getComments = function(numberComments) {
       avatar: 'img/avatar-' + getRandomInteger(MIN_AVATAR_IMG, MAX_AVATAR_IMG) + '.svg',
       message: getRandomElement(commentsArray),
       name: getRandomElement(namesArray)
-    }
+    };
 
     comments.push(comment);
   }
   return comments;
-}
+};
 
 var mockPhotos = [];
 
-var getMocks = function() {
+var getMocks = function () {
   for (var i = 1; i <= NUMBER_PHOTO; i++) {
 
     var photo = {
@@ -53,11 +53,12 @@ var getMocks = function() {
       description: 'описание фотографии',
       likes: getRandomInteger(MIN_LIKES, MAX_LIKES),
       comments: getComments(Math.floor(Math.random()*MAX_COMMENTS_NUMBER) + 1)
-    }
+    };
+
     mockPhotos.push(photo);
   }
   return mockPhotos;
-}
+};
 
 var mocks = getMocks(NUMBER_PHOTO);
 
@@ -68,7 +69,7 @@ var renderPhoto = function (variantStorage) {
   photoElement.children[1].children[0].text = variantStorage.comments.length;
 
   return photoElement;
-}
+};
 
 var fragment = document.createDocumentFragment();
 for (var j = 0; j < mockPhotos.length; j++) {

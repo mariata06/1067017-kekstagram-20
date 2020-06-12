@@ -43,9 +43,11 @@ var getComments = function (numberComments) {
   return comments;
 };
 
-var mockPhotos = [];
+
 
 var getMocks = function () {
+  var mockPhotos = [];
+
   for (var i = 1; i <= NUMBER_PHOTO; i++) {
 
     var photo = {
@@ -72,8 +74,8 @@ var renderPhoto = function (variantStorage) {
 };
 
 var fragment = document.createDocumentFragment();
-for (var j = 0; j < mockPhotos.length; j++) {
-  fragment.appendChild(renderPhoto(mockPhotos[j]));
+for (var j = 0; j < mocks.length; j++) {
+  fragment.appendChild(renderPhoto(mocks[j]));
 }
 
 listElement.appendChild(fragment);

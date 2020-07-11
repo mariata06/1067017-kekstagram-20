@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм» [![Build status][travis-image]][travis-url]
 
 * Студент: [Mariya Turmasova](https://up.htmlacademy.ru/javascript/20/user/1067017).
-* Наставник: [Ivan Chernobuk](https://htmlacademy.ru/profile/id237614).
+* Наставник: [Julia Kotretskaya](https://htmlacademy.ru/profile/id11886).
 
 ---
 

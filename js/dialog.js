@@ -1,11 +1,10 @@
 'use strict';
 
 (function () {
-  var START_X_COORDS = '90px';
   var MIN_X_COORDS = 0;
   var MAX_X_COORDS = 450;
-
   var levelPin = document.querySelector('.effect-level__pin');
+  var START_X_COORDS = levelPin.style.left;
 
   levelPin.addEventListener('mousedown', function (evt) {
     evt.preventDefault();
@@ -40,6 +39,7 @@
       // console.log(X);
     };
 
+
     var onMouseUp = function (upEvt) {
       upEvt.preventDefault();
 
@@ -47,11 +47,12 @@
       document.removeEventListener('mouseup', onMouseUp);
 
       if (dragged) {
+        /*
         var onClickPreventDefault = function (clickEvt) {
           clickEvt.preventDefault();
           levelPin.removeEventListener('click', onClickPreventDefault);
         };
-
+        */
         levelPin.addEventListener('click', onClickPreventDefault);
       }
     };
@@ -64,6 +65,5 @@
   window.dialog = {
     START_X_COORDS: START_X_COORDS,
     levelPin: levelPin
-    //X: X
   };
 })();
